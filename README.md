@@ -1,49 +1,90 @@
-### Library-inventory-manager--Anushka-
-A Python-based Library Inventory Management System with:
-✓ Object-Oriented Design
-✓ JSON File Persistence
-✓ Exception Handling
-✓ Logging
-✓ Fully Functional Command Line Interface
-✓ Search, Add, Issue, Return Features
-✓ Clean Project Packaging
+### 📚 Library Inventory Manager – Anushka
 
-## Project Structure
+A simple Python-based command-line Library Inventory Manager.  
+This project manages books in a library with features like adding books, issuing, returning, searching, and storing data in JSON format.
+
+Designed as a B.Tech 1st year Python assignment 3rd with proper OOP concepts, file handling, exception handling, and logging.
+
+---
+
+## 🚀 Features
+
+## Book Management
+- Add new books  
+- Issue a book  
+- Return a book  
+- Check availability  
+- Convert book object to dictionary  
+
+## Inventory Management
+- Store all books in a list  
+- Search by title  
+- Search by ISBN  
+- Display all books  
+
+## JSON File Storage
+- Automatically saves book data to `books.json`  
+- Loads data when application starts  
+- Handles missing or corrupted files with try–except  
+
+## Logging
+Uses Python's `logging` module:
+- INFO logs for normal actions  
+- ERROR logs for file issues  
+
+A file named `library.log` is created automatically.
+
+## Menu-Driven CLI
+- Simple text-based interface  
+- Input validation  
+- User-friendly messages  
+
+---
+
+## Folder Structure
 library-inventory-manager-Anushka/
 │
+├── books.json
+├── README.md
+├── requirements.txt
+├── .gitignore
+│
 ├── library_manager/
-│   ├── book.py         # Book class definition
-│   └── inventory.py    # Inventory manager logic
+│ ├── init.py
+│ ├── book.py
+│ └── inventory.py
 │
-├── cli/
-│   └── main.py         # Menu-driven CLI interface
-│
-├── books.json          # Database file (JSON)
-├── README.md           # Project Documentation
-├── requirements.txt    # Dependencies list
-└── .gitignore
+└── cli/
+└── main.py
 
-## Features
-# Book Class
-=> title, author, isbn, status fields
-=> issue(), return_book(), is_available()
-=> JSON serialization with to_dict()
-=> str() override for clean printing
 
-# Inventory Manager
-=> Add books
-=> Search by Title / ISBN
-=> Issue & Return books
-=> Display all books
-=> Duplicate ISBN prevention
-=> JSON file save/load
-=> Error handling for missing/corrupt files
+---
 
-# CLI Interface
-=> Simple numbered menu
-=> Input validation
-=> Live updates to JSON
-=> Logging all actions
+## Requirements
 
-# Logging
-=> All actions and exceptions are logged to:library.log
+Project uses only Python's built-in libraries:
+- `json`
+- `pathlib`
+- `logging`
+
+---
+## How to Run the Project
+Open terminal inside the project folder and run:
+python -m cli.main
+
+You will see this menu:
+
+Library Inventory Manager
+1.Add Book
+2.Issue Book
+3.Return Book
+4.View All Books
+5.Search by Title
+6.Search by ISBN
+
+## Error Handling
+Missing JSON file → program creates a new one
+Corrupted JSON → displays message and resets file
+Wrong input → safely handled with try–except
+Exit
+
