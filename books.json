@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Introduction to Python",
+    "author": "A. Author",
+    "isbn": "9781111111111",
+    "status": "issued"
+  },
+  {
+    "title": "Data Structures",
+    "author": "B. Author",
+    "isbn": "9782222222222",
+    "status": "issued"
+  },
+  {
+    "title": "Computational Mathematics",
+    "author": "R.D Sharma",
+    "isbn": "9783333333333",
+    "status": "available"
+  }
+]
